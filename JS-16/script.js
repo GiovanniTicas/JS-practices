@@ -37,3 +37,20 @@ const truck = Object.create(vehicle) // Vehicle acting as Constructor
 truck.doors = 2
 console.log(truck.doors)
 console.log(truck.wheels) //Inheritance
+
+// Destructuring objects
+
+const band = {
+  vocals: "Robert Plant",
+  guitar: "Jimmy Page",
+  bass: "John Paul Jones",
+  drums: "John Bonham",
+}
+
+function sings({ vocals }) {
+  return `${vocals} sings`
+}
+
+console.log(sings(band))
+// When loggin the functions "sings(), we pass the band object but as stated above,
+// only the vocals key gets printed/taken from the object"
